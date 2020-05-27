@@ -49,6 +49,11 @@
                     <mainClass>com.example.Main</mainClass>
                 </configuration>
             </plugin>
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.21.0</version>
+
+            </plugin>
         </plugins>
     </build>
     <dependencies>
