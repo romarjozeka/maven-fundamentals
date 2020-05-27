@@ -8,8 +8,8 @@ The "learning-git" repository was also another part of my path.
 
 **I know that IDEs have Maven integrated to quickly bootstrap a Maven app or use a template toolkit like Maven Archetype, but i will do each step from scratch for the sake of learning.**
 
-The project will be divided into the following parts.
+The project will be divided into the following sections.
 
-1)First will be a basic Maven example.
+1)A basic Maven example
 
-2)Second will be multi module example with more than one pom files.
+2)A multi module example with more than one pom files.
