@@ -10,5 +10,5 @@
     <!--By setting packaging to pom type, means that project will serve as a parent or an aggregator,
     it won't produce further artifacts. -->
     <packaging>pom</packaging>
-
+    <description>This pom is the parent pom for all sub-modules.</description>
 </project>
