@@ -56,7 +56,9 @@ public class UserDao implements UserDaoApi<User> {
   }
 
   @Override
-  public void save(User user) {}
+  public void save(User user) {
+    users.add(user);
+  }
 
   @Override
   public void update(User user, String[] params) {
