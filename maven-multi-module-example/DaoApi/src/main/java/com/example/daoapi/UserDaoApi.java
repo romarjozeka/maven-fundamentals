@@ -3,7 +3,7 @@ package com.example.daoapi;
 import java.util.List;
 import java.util.Optional;
 
-public interface UserDao <T> {
+public interface UserDaoApi<T> {
     List<T> getAll();
 
     Optional<T> get(long id);
