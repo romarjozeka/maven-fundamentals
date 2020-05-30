@@ -52,7 +52,7 @@ public class UserDao implements UserDaoApi<User> {
 
   @Override
   public Optional<User> get(long id) {
-    return Optional.empty();
+    return Optional.ofNullable(users.get((int) id));
   }
 
   @Override
