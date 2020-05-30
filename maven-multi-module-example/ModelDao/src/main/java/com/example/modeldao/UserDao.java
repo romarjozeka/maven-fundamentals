@@ -71,5 +71,7 @@ public class UserDao implements UserDaoApi<User> {
   }
 
   @Override
-  public void delete(User user) {}
+  public void delete(User user) {
+    users.remove(user);
+  }
 }
