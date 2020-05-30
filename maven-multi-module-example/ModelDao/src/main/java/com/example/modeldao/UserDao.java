@@ -47,7 +47,7 @@ public class UserDao implements UserDaoApi<User> {
 
   @Override
   public List<User> getAll() {
-    return null;
+    return users;
   }
 
   @Override
