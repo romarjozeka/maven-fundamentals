@@ -1,10 +1,17 @@
 package com.example.modeldao;
+
 import com.example.daoapi.UserDaoApi;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 public class UserDao implements UserDaoApi <User>{
+
+
+    private List<User> users = new ArrayList<>();
+
+
 
     @Override
     public List<User> getAll() {
