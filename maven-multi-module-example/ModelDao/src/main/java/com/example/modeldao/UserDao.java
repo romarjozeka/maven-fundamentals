@@ -13,6 +13,21 @@ public class UserDao implements UserDaoApi <User>{
 
 
 
+    private int userLimit;
+    public UserDao(int userLimit) {
+
+
+    }
+
+    public int getUserLimit() {
+        return userLimit;
+    }
+
+    public void setUserLimit(int userLimit) {
+        this.userLimit = userLimit;
+    }
+
+
     @Override
     public List<User> getAll() {
         return null;
