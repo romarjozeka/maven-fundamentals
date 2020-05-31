@@ -28,7 +28,12 @@
             </plugin>
         </plugins>
     </build>
-
+    <dependencies>
+        <dependency>
+            <groupId>com.example.modeldao</groupId>
+            <artifactId>ModelDao</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency></dependencies>
 
 
 </project>
