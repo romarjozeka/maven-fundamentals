@@ -3,10 +3,7 @@ package com.example.modeldao;
 import com.example.daoapi.UserDaoApi;
 import com.github.javafaker.Faker;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
+import java.util.*;
 
 public class UserDao implements UserDaoApi<User> {
 
@@ -44,6 +41,13 @@ public class UserDao implements UserDaoApi<User> {
   public void setUserLimit(int userLimit) {
     this.userLimit = userLimit;
   }
+public User getRandomUser(){
+  Random rand = new Random(); //instance of random class
+  int upperbound = userLimit;
+  //generate random values from 0-userLimit
+  int int_random = rand.nextInt(upperbound);
+  return users.get(int_random);
+}
 
   @Override
   public List<User> getAll() {
