@@ -13,10 +13,11 @@ public class UserDao implements UserDaoApi<User> {
 
   public UserDao(int userLimit) {
 
-    generateUsers(userLimit);
+    this.userLimit=userLimit;
+    generateUsers();
   }
 
-  private void generateUsers(int userLimit) {
+  private void generateUsers() {
     //Info message
     System.out.println("Generating "+userLimit+" users...");
 
@@ -42,10 +43,9 @@ public class UserDao implements UserDaoApi<User> {
     this.userLimit = userLimit;
   }
 public User getRandomUser(){
-  Random rand = new Random(); //instance of random class
-  int upperbound = userLimit;
-  //generate random values from 0-userLimit
-  int int_random = rand.nextInt(upperbound);
+      int min=0,max=userLimit;
+    Random r = new Random();
+    int int_random= r.nextInt((max - min)) + min;
   return users.get(int_random);
 }
 
@@ -66,14 +66,22 @@ public User getRandomUser(){
 
   @Override
   public void update(User user, String[] params) {
-    user.setFistName(Objects.requireNonNull(
-            params[0], "Fist name cannot be null"));
-    user.setLastName(Objects.requireNonNull(
-            params[1], "Fist name cannot be null"));
-    user.setEmail(Objects.requireNonNull(
-            params[2], "Email cannot be null"));
 
-    users.add(user);
+    //Simple Linear iteration for sake of simplicity
+    ListIterator<User> listItr= users.listIterator();
+
+    while(listItr.hasNext()){
+      User currentUser= listItr.next();
+      if(currentUser.getId()==user.getId()){
+
+        currentUser.setFistName(Objects.requireNonNull(
+                params[0], "Fist name cannot be null"));
+        currentUser.setLastName(Objects.requireNonNull(
+                params[1], "Last name cannot be null"));
+        currentUser.setEmail(Objects.requireNonNull(
+                params[2], "Email cannot be null"));
+      }
+    }
   }
 
   @Override
