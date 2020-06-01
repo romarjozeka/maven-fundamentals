@@ -10,6 +10,7 @@
     <modules>
         <module>DaoApi</module>
         <module>ModelDao</module>
+        <module>MainApp</module>
     </modules>
 
     <!--By setting packaging to pom type, means that project will serve as a parent or an aggregator,
