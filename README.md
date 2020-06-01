@@ -1,5 +1,7 @@
 # maven-fundamentals
 
+**Note**: The project is not yet finished, unit tests need to be made and some other fixes.
+
 The goal of this project is to learn the fundamentals of Maven (Maven 3.6.3 at the time of writing).
 
 This is part of me learning modern Java development.
@@ -15,7 +17,7 @@ The project will be divided into the following sections.
 1)A basic Maven example \
 2)A multi module example with more than one pom files
 
-What i used: \
+Environment: \
 JDK 11 \
 Maven 3.6.3 \
 IntelliJ IDEA \
